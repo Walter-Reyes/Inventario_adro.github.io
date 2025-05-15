@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!--
+    meta datos, estilos o scripts
+    -->
+    <meta charset="utf-8">
+    <meta http-equiv="Inventarios" content="Inventarios-Almacen">
+    <!--
+    nombre de la pestaña del navegador
+    -->
+    <title>Pagina</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+    conectado al archivo css
+    -->
+
+    <link rel="stylesheet" href="css/Edicion.css">
+    <!--
+    BOOTSTRAP
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!--
+    div donde esta la imagen y el titulo
+    div 1    
+    -->
+    <div>
+        <div class="Inv">
+            <I><img src="img/adro.jpg" alt="Adro" />
+            </I>
+
+            <p>Inventario</p>
+
+        </div>
+    </div>
+</body>
+<!--
+menu desplegable de los estantes
+nav 1
+-->
+
+<body>
+    <nav>
+        <form insubmit="llamarId(); return dalse;">
+            <label for="lang">BUSQUEDA </label>
+            <select name="Asentamiento" id="lang">
+                <option value="seleccionar">Selecciona un estante</option>
+                <option id="A1" value="1">1</option>
+                <option id="A2" value="2">2</option>
+                <option id="A3" value="3">3</option>
+                <option id="A4" value="4">4</option>
+                <option id="A5" value="5">5</option>
+                <option id="A6" value="6">6</option>
+                <option id="A7" value="7">7</option>
+                <option id="A8" value="8">8</option>
+                <option id="A9" value="9">9</option>
+                <option id="A10" value="10">10</option>
+                <option id="A11" value="11">11</option>
+                <option id="A12" value="12">12</option>
+                <option id="A13" value="13">13</option>
+                <option id="A14" value="14">14</option>
+            </select>
+            <!--
+            el boton buscar que si realizamos clic llamamos la funcion llamarId de el script
+            -->
+            <button type="button" onclick="llamarId()">BUSCAR</button>
+        </form>
+    </nav>
+    <aside>
+        <!--
+        imprimir la funcion llamrId
+        aside 1
+        -->
+        <h2 id="numeroEstante"> Estante </h2>
+        <script src="scripts/script-llamar.js"></script>
+    </aside>
+</body>
+
+<body>
+    <!--
+    la matriz de los botones con su css y script
+    div 2
+    -->
+
+    <nav class="Inv">
+        <div class="grid" id="matriz"></div>
+        <script src="scripts/script-matriz.js"></script>
+    </nav>
+</body>
+
+<body>
+    <form id="DatosForm"></form>
+</body>
+
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Ubicacion</th>
+                <th>Item</th>
+                <th>Descripcion de Item</th>
+                <th>Unidad Venta</th>
+                <th>Unidad Orden</th>
+                <th>Inv General</th>
+                <th>Fecha Vencimiento</th>
+                <th colspan="4">Accion</th>
+            </tr>
+        </thead>
+        <tbody id="tablaBody">
+            <tr>
+                <th>1</th>
+
+                <td colspan="1">
+                    <input type="text" id="DatoUbi" placeholder="Ubicacion" />
+                </td>
+                <td colspan="1">
+                    <input type="text" id="DatoItem" placeholder="Item" />
+                </td>
+                <td colspan="1">
+                    <input type="text" id="DatoDesItem" placeholder="Descripcion de Item" />
+                </td>
+                <td colspan="1">
+                    <input type="text" id="DatoUniVenta" placeholder="Unidad Venta" />
+                </td>
+                <td colspan="1">
+                    <input type="text" id="DatoUniOrden" placeholder="Unidad Orden" />
+                </td>
+                <td colspan="1">
+                    <input type="text" id="DatoInvGene" placeholder="Inv General" />
+                </td>
+                <td colspan="1">
+                    <input type="text" id="DatoFechaVen" placeholder="Fecha Vencimiento" />
+                </td>
+                <td>
+                    <button type="button" onclick="agregarFila()">
+                        <img src="img/guardar.png" alt="Agregar" width="20" height="20" />
+                    </button>
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+    <script src="scripts/script-guardar.js"></script>
+</body>
+
+</html>
